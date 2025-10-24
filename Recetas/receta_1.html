@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Receta 1</title>
+    <title>Asado Argentino Tradicional</title>
     <link rel="stylesheet" href="../CSS/recetas.css">
+    <link rel="icon" href="../imagenes/Logo.png">
 </head>
 <body>
     <header>
@@ -22,16 +23,20 @@
             </p>
             </div>
         </div>
-        <div class="Informacion-receta">
+    <div class="parent">
+        <div class="div1">           
         <h2>Autor</h2>
+        <h3>Gerónimo Gómez </h3>
+        <img src="../imagenes/chef_gero.jpg" alt="Imagen_chef_gero">
         <p>
-            Gerónimo Gómez <br>
             Amante de la cocina criolla y las tradiciones argentinas. Inspirado por los domingos en familia y el sabor único del asado a la parrilla.
         </p>
+        </div>
+        <div class="div2">    
         <h2>Ingredientes</h2>
         <h3>Para el Asado</h3>
             <ul>
-                <li>2 kg de costillas de res</li>
+                <li>2 kg de costillas de res</li>s
                 <li>1 kg de vacío o entraña</li>
                 <li>1 kg de chorizos</li>
                 <li>1 kg de morcillas</li>
@@ -46,7 +51,9 @@
                 <li>1 cucharada de perejil fresco picado</li>
                 <li>Sal y pimienta a gusto</li>
             </ul>
-        <h3>Receta</h3>
+        </div>
+        <div class="div3">
+                <h2>Receta</h2>
             <ol>
                 <li>Preparar el fuego: encender el carbón o la leña con suficiente antelación (unos 30–40 minutos) hasta obtener brasas parejas.</li>
                 <li>Salado de la carne: salar la carne con sal gruesa justo antes de colocarla en la parrilla.</li>
@@ -56,6 +63,9 @@
                 <li>Servir y disfrutar: retirar la carne cuando esté dorada y jugosa. Acompañar con chimichurri, ensaladas y pan.</li>
             </ol>
             
+        </div>
+    </div>
+            <div class="opiniones">
             <h2>Califica esta receta y deja tu opinión</h2>
             
             <div class="rating">
@@ -66,16 +76,15 @@
                 <input type="radio" name="star" id="star1" value="1"><label for="star1">★</label>
             </div>
             
+            <div class="enviar">
             <p id="valor">Selecciona una calificación</p>
             
             <textarea id="opinion" placeholder="Escribe tu opinión aquí..."></textarea><br>
             <button id="enviar">Enviar opinión</button>
-            
-            <div id="opiniones"></div>
-            
+            </div>
+            </div>
     </main>
     <footer>
-        
     </footer>
     <script src="../main.js"></script>
 </body>

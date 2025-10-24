@@ -1,93 +1,192 @@
- body {
-    font-family: Arial, sans-serif;
-    background: #f8f8f8;
-    margin-top: 50px;
-    padding: 0;
+/* --------------------------- RESET --------------------------- */
+* {
     margin: 0;
-  }
-header{
-    background-color: rgb(0, 0, 0);
-    height: 150px;
-    margin-bottom: 50px;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-footer{
-    background-color: rgb(0, 0, 0);
-    height: 100px;
+
+/* ------------------------- BODY ---------------------------- */
+body {
+    background-color: #fff8f0; /* fondo cálido */
+    color: #333;
+    line-height: 1.6;
 }
-  .rating {
-    display: inline-flex;
-    flex-direction: row-reverse;
-    font-size: 40px;
-    cursor: pointer;
-  }
 
-  .rating input {
-    display: none;
-  }
+/* ------------------------ HEADER --------------------------- */
+header {
+    background-color: #c8102e; /* rojo navideño */
+    padding: 1rem;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
 
-  .rating label {
-    color: #ccc;
-    transition: color 0.2s;
-  }
-
-  .rating input:checked ~ label,
-  .rating label:hover,
-  .rating label:hover ~ label {
-    color: #FFD700;
-  }
-
-  textarea {
-    width: 80%;
-    max-width: 500px;
-    height: 100px;
-    margin-top: 20px;
-    padding: 10px;
-    font-size: 16px;
-    resize: none;
-  }
-
-  button {
-    margin-top: 15px;
-    padding: 10px 20px;
-    font-size: 16px;
-    background: #FFD700;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background 0.3s;
-  }
-
-  button:hover {
-    background: #e6c200;
-  }
-
-  #valor {
-    margin-top: 10px;
-    font-size: 18px;
-  }
-
-  #opiniones {
-    margin-top: 40px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: left;
-  }
-  .imagen{
-    background-color: bisque;
+/* ------------------------ IMAGEN PRINCIPAL ---------------- */
+.imagen {
     display: flex;
-  }
-  .imagen h1{
-    font-size: 40px;
-  }
-  .imagen p{
-    font-size: 25px;
-  }
-  .imagen img{
-   height: 250px;
-   padding: 20px;
-   border-radius: 30px;
-  }
-  main h2{
-   font-size: 25px;
-  }
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f2ec;
+    padding: 2rem;
+    margin: 1rem auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.imagen img {
+    max-width: 400px;
+    width: 100%;
+    border-radius: 15px;
+    margin-right: 2rem;
+}
+
+.descripcion {
+    max-width: 600px;
+}
+
+.descripcion h1 {
+    color: #2e7d32; /* verde navideño */
+    margin-bottom: 1rem;
+}
+
+.descripcion p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* ------------------------ CONTENEDORES ---------------------- */
+.parent {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.div1, .div2, .div3 {
+    background-color: #fff3e0; /* tono cálido */
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    flex: 1 1 300px;
+}
+
+h2 {
+    color: #b71c1c; /* rojo oscuro */
+    margin-bottom: 0.5rem;
+}
+
+h3 {
+    color: #2e7d32;
+    margin-bottom: 0.5rem;
+}
+
+ul, ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* ------------------------ RATING --------------------------- */
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    font-size: 2rem;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.rating input:checked ~ label,
+.rating label:hover,
+.rating label:hover ~ label {
+    color: #ff9800; /* dorado brillante */
+}
+
+/* ------------------------ TEXTO DE VALOR ------------------- */
+#valor {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+/* ------------------------ TEXTAREA ------------------------- */
+textarea {
+    width: 100%;
+    max-width: 700px;
+    min-height: 100px;
+    padding: 0.8rem;
+    border-radius: 10px;
+    border: 2px solid #c8102e;
+    outline: none;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    resize: vertical;
+}
+
+/* ------------------------ BOTÓN ---------------------------- */
+button {
+    background-color: #2e7d32;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #1b5e20;
+}
+
+/* ------------------------ OPINIONES ------------------------ */
+.opiniones h2{
+ text-align: center;
+}
+.enviar{
+  text-align: center;
+}
+/* ------------------------ FOOTER --------------------------- */
+footer {
+    background-color: #c8102e;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    border-top: 5px solid #2e7d32;
+}
+
+/* ------------------------ RESPONSIVE ----------------------- */
+@media screen and (max-width: 900px) {
+    .imagen {
+        flex-direction: column;
+    }
+
+    .imagen img {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .parent {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* ------------------------ IMAGEN CHEF ----------------------- */
+.div1 img{
+  height: 250px;
+  width: 250px;
+  border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
