@@ -1,11 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kitty Claus</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css">
+    <title>Página de Recetas</title>
 </head>
 <body>
-    <img src="./imagenes/Logo.png" alt="Logo.img">
+
+<header>
+    <div class="logo">Logo</div>
+
+    <nav>
+        <div class="dropdown">
+            <button class="dropbtn">Géneros de Comida</button>
+            <div class="dropdown-content">
+                <a href="#">Género 1</a>
+                <a href="#">Género 2</a>
+                <a href="#">Género 3</a>
+                <a href="#">Género 4</a>
+                <a href="#">Género 5</a>
+            </div>
+        </div>
+
+        <div class="auth">
+            <a href="#">Iniciar sesión</a>
+            <a href="#">Registrarse</a>
+        </div>
+    </nav>
+</header>
+
+<section class="intro">
+    <h1>Introducción a Página de Recetas</h1>
+    <p>
+        Bienvenido a nuestra colección de recetas. Aquí encontrarás comidas tradicionales 
+        y modernas, simples o elaboradas, para que disfrutes de cocinar y aprender.
+    </p>
+</section>
+
+<section class="gallery">
+    <h2>Género de comida 1/5</h2>
+
+    <div class="slider">
+        <button class="arrow">←</button>
+
+        <div class="cards">
+            <a href="receta1.html" class="card">
+                <img src="https://via.placeholder.com/150" alt="comida 1">
+                <p>Comida 1</p>
+                <div class="stars">★★★★★</div>
+            </a>
+
+            <a href="receta2.html" class="card">
+                <img src="https://via.placeholder.com/150" alt="comida 2">
+                <p>Comida 2</p>
+                <div class="stars">★★★★★</div>
+            </a>
+
+            <a href="receta3.html" class="card">
+                <img src="https://via.placeholder.com/150" alt="comida 3">
+                <p>Comida 3</p>
+                <div class="stars">★★★★★</div>
+            </a>
+
+            <a href="receta4.html" class="card">
+                <img src="https://via.placeholder.com/150" alt="comida 4">
+                <p>Comida 4</p>
+                <div class="stars">★★★★★</div>
+            </a>
+        </div>
+
+        <button class="arrow">→</button>
+    </div>
+</section>
+
 </body>
 </html>
