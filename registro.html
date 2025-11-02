@@ -34,11 +34,11 @@
                 <input type="password" id="password2" name="password2" placeholder="Repite la contraseña" required>
 
                 <label for="fecha">Fecha de nacimiento</label>
-                <input type="date" id="fecha" name="fecha" required>
+                <input type="date" id="fecha" name="fecha" required max="2024-12-31" min="1900-01-01" >
 
                 <label for="genero">Género</label>
                 <select id="genero" name="genero" required>
-                    <option value="">Seleccione...</option>
+                    <option value="" disabled>Seleccione...</option>
                     <option value="femenino">Femenino</option>
                     <option value="masculino">Masculino</option>
                     <option value="otro">Otro</option>
@@ -58,9 +58,17 @@
             </form>
         </div>
     </main>
+<!-- Modal de alerta de contraseña -->
+<div id="modal-password" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p id="modal-message"></p>
+    </div>
+</div>
 
     <footer>
         <p>Footer</p>
     </footer>
+    <script src="main.js"></script>
 </body>
 </html>
