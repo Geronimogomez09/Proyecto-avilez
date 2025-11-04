@@ -1,0 +1,483 @@
+/* ===========================
+   Styles principales
+   =========================== */
+
+/* Variables (paleta con verde neón para CTA) */
+:root {
+    --bg: #ffffff;
+    --text: #111111;
+    --green-accent: rgb(0, 255, 20);
+    /* CTA principal */
+    --green-primary: #006644;
+    /* verde principal elegante */
+    --blue: #0077cc;
+    --yellow: #ffeb3b;
+    --red: #ff3b3b;
+
+    --muted: #6b7280;
+    --card-bg: #fafafa;
+    --sidebar-bg: #f7f9f8;
+    --glass: rgba(255, 255, 255, 0.6);
+    --glass-dark: rgba(255, 255, 255, 0.06);
+
+    --radius: 14px;
+    --transition: 260ms;
+    --max-width: 1200px;
+    --gap: 16px;
+    --font: "Poppins", system-ui, Arial, sans-serif;
+}
+
+/* Reset básico */
+* {
+    box-sizing: border-box
+}
+
+html,
+body {
+    height: 100%
+}
+
+body {
+    margin: 0;
+    font-family: var(--font);
+    color: var(--text);
+    background: linear-gradient(#f3f6f5, #eef2f1);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===== LAYOUT: sidebar + main ===== */
+.sidebar {
+    position: fixed;
+    overflow: auto;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100vh;
+    padding: 24px;
+    box-sizing: border-box;
+    background: var(--sidebar-bg);
+    border-right: 1px solid #e6e9e8;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    box-shadow: 0 8px 30px rgba(16, 24, 24, 0.05);
+}
+
+/* Mobile: sidebar pasa arriba */
+@media(max-width:900px) {
+    .sidebar {
+        position: static;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        display: block;
+        padding: 12px 18px;
+    }
+
+    main {
+        margin-top: 0;
+        padding: 0 12px;
+    }
+}
+
+/* Main area to the right */
+.main {
+    margin-left: 320px;
+    padding: 28px;
+    min-height: 100vh;
+}
+
+@media(max-width:900px) {
+    .main {
+        margin-left: 0;
+        padding: 16px;
+    }
+}
+
+/* ===== BRAND (logo + title) ===== */
+.brand {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e9eceb;
+}
+
+.logo-img {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    border-radius: 22px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    filter: contrast(1.03) saturate(1.05);
+}
+
+/* si el logo es muy claro, aplicamos un sutil fondo - CSS "mejora" versión B */
+.brand .brand-text h1 {
+    font-size: 1.05rem;
+    margin: 0;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.brand .brand-text small {
+    color: var(--muted);
+    font-size: 0.78rem
+}
+
+/* ===== NAV: tarjetas minimalistas ===== */
+.nav-cards {
+    margin-top: 18px;
+}
+
+.nav-title {
+    font-size: 0.95rem;
+    color: var(--muted);
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.nav-items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.nav-item {
+    display: block;
+    text-decoration: none;
+    color: var(--text);
+    background: #fff;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid #eef2ef;
+    box-shadow: 0 6px 18px rgba(16, 24, 24, 0.02);
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.nav-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.06);
+}
+
+/* ===== ANUNCIO ===== */
+.anuncio {
+    background: #fff;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #eee;
+    color: var(--muted);
+    font-size: 0.92rem;
+}
+
+/* ===== LOGIN vertical ===== */
+.sidebar-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.login-btn,
+.signup-btn {
+    display: inline-block;
+    text-align: center;
+    padding: 10px 12px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-btn {
+    background: var(--blue);
+    color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.signup-btn {
+    background: #fff;
+    color: var(--blue);
+    border: 2px solid var(--blue);
+}
+
+.login-btn:hover {
+    background: #005fa3;
+}
+
+.signup-btn:hover {
+    background: var(--blue);
+    color: #fff;
+}
+
+/* ===== HERO (efecto cristal / blur) ===== */
+.hero {
+    margin-bottom: 22px;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-blur {
+    width: 100%;
+    max-width: var(--max-width);
+    padding: 28px;
+    border-radius: 18px;
+    backdrop-filter: blur(6px);
+    /* efecto cristal */
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.45));
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    box-shadow: 0 12px 40px rgba(10, 20, 20, 0.04);
+}
+
+.lead {
+    color: var(--muted);
+    font-size: 1rem;
+    margin-top: 8px;
+    max-width: 900px;
+}
+
+/* ===== TITULOS BRILLANTES (sutil) ===== */
+.titulo-brillante {
+    display: block;
+    font-size: clamp(1.4rem, 2.6vw, 2rem);
+    font-weight: 700;
+    color: var(--green-primary);
+}
+
+.subtitulo-brillante {
+    font-size: 1.05rem;
+    color: var(--muted);
+}
+
+/* ===== CATALOGO / CATEGORIAS ===== */
+.catalogo {
+    max-width: var(--max-width);
+    margin-top: 12px;
+    margin-bottom: 40px;
+}
+
+/* cabecera categoria */
+.categoria {
+    margin: 36px 0;
+}
+
+.cat-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    gap: 10px;
+}
+
+.cat-head h3 {
+    margin: 0;
+    font-size: 1.05rem;
+    color: var(--green-primary);
+}
+
+.controls {
+    display: flex;
+    gap: 8px;
+}
+
+/* controles */
+.controls button {
+    background: #fff;
+    border: 1px solid #e6e6e6;
+    padding: 8px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all var(--transition);
+}
+
+.controls button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* ===== CARUSEL ===== */
+/* contenedor deslizable horizontal */
+.carousel {
+    display: flex;
+    gap: 18px;
+    overflow: hidden;
+    padding: 6px 2px;
+    scroll-behavior: smooth;
+}
+
+/* cada tarjeta */
+.card {
+    width: 280px;
+    flex: 0 0 280px;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #eee;
+    box-shadow: 0 8px 24px rgba(11, 22, 22, 0.04);
+    position: relative;
+    transition: transform var(--transition), opacity var(--transition), filter var(--transition);
+}
+
+/* imagen principal de la tarjeta */
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    transition: filter .35s ease, transform .35s ease;
+}
+
+/* meta info */
+.card .meta {
+    padding: 12px;
+    background: transparent;
+    color: var(--text);
+}
+
+.card .meta h4 {
+    margin: 0 0 6px 0;
+    font-size: 1rem;
+}
+
+.card .meta .info {
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* estado "principal" (centro), lateral izquierda y derecha serán escaladas vía JS */
+.card.center {
+    transform: scale(1);
+    opacity: 1;
+    z-index: 3;
+}
+
+.card.left,
+.card.right {
+    transform: scale(0.88);
+    opacity: 0.7;
+    filter: brightness(0.98);
+    z-index: 2;
+}
+
+.card.side {
+    transform: scale(0.84);
+    opacity: 0.55;
+    filter: brightness(0.95);
+    z-index: 1;
+}
+
+/* Hover desenfoque y descripción emergente */
+.card:hover img {
+    filter: blur(2px) brightness(.95);
+    transform: translateY(-4px) scale(1.02);
+}
+
+.card .meta {
+    transform: translateY(8px);
+    transition: transform .35s ease;
+}
+
+.card:hover .meta {
+    transform: translateY(0);
+}
+
+/* Placeholder */
+.card.placeholder img {
+    filter: grayscale(.3) contrast(.95)
+}
+
+/* responsive: reducir ancho de cards */
+@media(max-width:1100px) {
+    .card {
+        width: 240px;
+        flex: 0 0 240px;
+    }
+
+    .card img {
+        height: 150px;
+    }
+}
+
+@media(max-width:700px) {
+    .sidebar {
+        display: block;
+    }
+
+    /* already stacked */
+    .card {
+        width: 72vw;
+        flex: 0 0 72vw;
+    }
+
+    .carousel {
+        gap: 12px;
+    }
+
+    .cat-head {
+        gap: 6px;
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+/* CTA principal (verde neón) - usar en botones importantes */
+.cta {
+    background: var(--green-accent);
+    color: #000;
+    font-weight: 700;
+    padding: 10px 16px;
+    border-radius: 10px;
+    border: none;
+    transition: transform .2s ease;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.cta:hover {
+    transform: translateY(-3px);
+}
+
+/* ===== FOOTER ===== */
+.site-footer {
+    margin-top: 40px;
+    background: #fff;
+    border-top: 1px solid #e8e8e8;
+    padding: 20px 28px;
+    color: var(--muted);
+}
+
+.footer-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-logo {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 18px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links .fcol {
+    min-width: 140px;
+}
+
+/* small screens footer stacks */
+@media(max-width:700px) {
+    .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+}
