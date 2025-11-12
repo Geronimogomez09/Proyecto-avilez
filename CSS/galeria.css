@@ -1,0 +1,278 @@
+/* ---------- ESTILOS GENERALES ---------- */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f3ee;
+    color: #333;
+  }
+  
+  .container {
+    display: flex;
+  }
+  
+  /* ---------- SIDEBAR (MISMO DEL INDEX) ---------- */
+  .sidebar {
+    width: 280px;
+    background: #fff;
+    border-right: 2px solid #e3dfda;
+    padding: 20px;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.05);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+  }
+  
+  .logo-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+  
+  .logo {
+    width: 70px;
+    border-radius: 10px;
+    margin-right: 10px;
+  }
+  
+  .site-title {
+    color: #3f8c3f;
+    margin: 0;
+  }
+  
+  .tagline {
+    font-size: 14px;
+    color: #555;
+    margin: 2px 0 0;
+  }
+  
+ 
+  
+  
+/* ===== NAV: tarjetas minimalistas ===== */
+
+/* ===== NAV: tarjetas minimalistas (versión Kitty Claus) ===== */
+.nav-cards {
+    margin-top: 18px;
+  }
+  
+  .nav-title {
+    font-size: 1rem;
+    color: #3f8c3f;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+  
+  .nav-items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .nav-item {
+    display: block;
+    text-decoration: none;
+    color: #b71c1c; /* rojo temático */
+    background: #f6f2ef;
+    border: 1px solid #3f8c3f; /* verde principal */
+    padding: 10px 12px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(16, 24, 24, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .nav-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    background-color: #fff;
+  }
+  
+  .nav-item.active {
+    background-color: #3f8c3f;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+
+/* ===== ANUNCIO ===== */
+.anuncio {
+    background: #fff;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #eee;
+    color: var(--muted);
+    font-size: 0.92rem;
+}
+
+  .anuncio h4 {
+    margin: 0 0 5px;
+    color: #3f8c3f;
+  }
+  
+  /* ---------- CONTENIDO PRINCIPAL ---------- */
+  .content {
+    margin-left: 300px;
+    padding: 30px;
+    width: 100%;
+  }
+  
+  .intro {
+    text-align: center;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  }
+  
+  .intro h1 {
+    color: #3f8c3f;
+  }
+  
+  /* ---------- GALERÍA ---------- */
+  .galeria {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .galeria a {
+    display: block;
+    overflow: hidden;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .galeria a:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  }
+  
+  .galeria img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.4s ease;
+  }
+  
+  .galeria a:hover img {
+    transform: scale(1.1);
+  }
+  
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width: 768px) {
+    .sidebar {
+      display: none;
+    }
+  
+    .content {
+      margin-left: 0;
+      padding: 20px;
+    }
+  }
+  /*imagen detras del texto we nomames*/
+  .intro {
+    position: relative;
+    background-image: url("../imagenes/principal/fondo80.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    padding: 3rem 2rem;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  }
+  
+  /* Capa de filtro borroso o claro encima de la imagen */
+  .intro::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.10); /* menos blanco, se nota más el fondo */
+    backdrop-filter: blur(3px); /* un poco menos borroso */
+    z-index: 0;
+  }
+  
+  /* Texto por encima del filtro */
+  .intro h1, .intro p {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .intro h1 {
+    font-size: 2.2rem;
+    color: #fff;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  }
+  
+  .intro p {
+    font-size: 1.1rem;
+    color: #f0f0f0;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
+  }
+  
+
+/* ===== FOOTER ===== */
+.site-footer {
+    background-color: rgb(226, 226, 226);
+    border-top: 1px solid #e8e8e8;
+    color: var(--muted);
+    padding: 10px 20px; 
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    /* 🔥 Para dejarlo fijo al fondo */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.05);
+}
+
+.footer-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 5px 20px;
+    justify-content: space-between;
+}
+
+.footer-logo {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 18px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links .fcol {
+    min-width: 140px;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    top: -5px;
+    left: -10px;
+}
+
+/* 🌸 Para que no tape el contenido de la galería */
+.content,
+.galeria {
+    padding-bottom: 150px; /* espacio para el footer fijo */
+}

@@ -101,3 +101,20 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 
 /* Accessibility improvements: allow focusing carousel items */
 document.querySelectorAll('.card').forEach(c => c.setAttribute('tabindex','0'));
+
+
+
+//galeria
+// Simulación de scroll infinito simple
+window.addEventListener('scroll', () => {
+  const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
+  if (scrollTop + clientHeight >= scrollHeight - 5) {
+    cargarMasImagenes();
+  }
+});
+
+function cargarMasImagenes() {
+  const galeria = document.getElementById('galeria');
+  const nuevas = galeria.innerHTML;
+  galeria.insertAdjacentHTML('beforeend', nuevas);
+}
