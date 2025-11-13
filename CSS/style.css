@@ -97,7 +97,7 @@ main article {
 }
 
 .hero-blur {
-    color: black;
+    color: rgb(255, 255, 255);
     font-size: 1.2vw;
     -webkit-text-stroke-width: 1px;
     background: rgba(255, 255, 255, 0.3);
@@ -109,7 +109,7 @@ main article {
 
 .hero-blur h2 {
     font-size: 2vw;
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
 
@@ -152,7 +152,7 @@ main article section article{
     margin: 20px;
     box-sizing: border-box;
     border-radius: 10px;
-    color: black;
+    color: rgb(255, 255, 255);
     font-size: 1.2vw;
     -webkit-text-stroke-width: 1px;
     text-align: center;

@@ -10,6 +10,31 @@ body {
     display: flex;
   }
   
+  :root {
+    --bg: #ffffff;
+    --text: #b71c1c;
+    --green-accent: rgb(0, 255, 20);
+    /* CTA principal */
+    --green-primary: #006644;
+    /* verde principal elegante */
+    --blue: #0077cc;
+    --yellow: #00d6c4;
+    --red: #b71c1c;
+
+    --muted: #0f46b4;
+    --card-bg: #fafafa;
+    --sidebar-bg: #f7f9f8;
+    --glass: rgba(255, 255, 255, 0.6);
+    --glass-dark: rgba(255, 255, 255, 0.06);
+
+    --radius: 14px;
+    --transition: 260ms;
+    --max-width: 1200px;
+    --gap: 16px;
+    --font: "Poppins", system-ui, Arial, sans-serif;
+
+}
+
   /* ---------- SIDEBAR (MISMO DEL INDEX) ---------- */
   .sidebar {
     width: 280px;
@@ -50,48 +75,77 @@ body {
   
 /* ===== NAV: tarjetas minimalistas ===== */
 
-/* ===== NAV: tarjetas minimalistas (versión Kitty Claus) ===== */
+/* ===== BRAND (logo + title) ===== */
+.brand {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    border-bottom: 2px solid var(--red);
+    box-shadow: 0 5px 5px 0px var(--red);
+    border-radius: 2vw;
+    color: var(--red);
+    background-color: rgb(226, 226, 226);
+    padding: 5px;
+}
+
+.logo-img {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    border-radius: 22px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    border: 2px solid black;
+    filter: contrast(1.03) saturate(1.05);
+}
+
+/* si el logo es muy claro, aplicamos un sutil fondo - CSS "mejora" versión B */
+.brand .brand-text h1 {
+    font-size: 1.15rem;
+    margin: 0;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.brand .brand-text small {
+    color: var(--muted);
+    font-size: 0.90rem
+}
+
+/* ===== NAV: tarjetas minimalistas ===== */
 .nav-cards {
     margin-top: 18px;
-  }
-  
-  .nav-title {
-    font-size: 1rem;
-    color: #3f8c3f;
+}
+
+.nav-title {
+    font-size: 1.10rem;
+    color: var(--muted);
     margin-bottom: 10px;
-    font-weight: 600;
-  }
-  
-  .nav-items {
+    font-weight: 700;
+}
+
+.nav-items {
     display: flex;
     flex-direction: column;
     gap: 10px;
-  }
-  
-  .nav-item {
+    font-size: 1.25rem;
+}
+
+.nav-item {
     display: block;
     text-decoration: none;
-    color: #b71c1c; /* rojo temático */
-    background: #f6f2ef;
-    border: 1px solid #3f8c3f; /* verde principal */
+    color: var(--text);
+    background: rgb(226, 226, 226);
+    border: var(--blue) 1px solid;
     padding: 10px 12px;
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(16, 24, 24, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .nav-item:hover {
+    box-shadow: 0 6px 18px rgba(16, 24, 24, 0.02);
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.nav-item:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-    background-color: #fff;
-  }
-  
-  .nav-item.active {
-    background-color: #3f8c3f;
-    color: #fff;
-    font-weight: bold;
-  }
-  
+    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.06);
+}
 
 /* ===== ANUNCIO ===== */
 .anuncio {
@@ -100,13 +154,8 @@ body {
     border-radius: 10px;
     border: 1px solid #eee;
     color: var(--muted);
-    font-size: 0.92rem;
+    font-size: 1.18rem;
 }
-
-  .anuncio h4 {
-    margin: 0 0 5px;
-    color: #3f8c3f;
-  }
   
   /* ---------- CONTENIDO PRINCIPAL ---------- */
   .content {
@@ -223,7 +272,7 @@ body {
     padding: 10px 20px; 
     box-sizing: border-box;
     display: flex;
-    align-items: center;
+    align-items:center;
     justify-content: space-between;
     gap: 20px;
 
@@ -231,8 +280,9 @@ body {
     position: fixed;
     bottom: 0;
     left: 0;
-    width: 100%;
+    width: 81%;
     z-index: 10;
+    margin-left: 322px;
     box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.05);
 }
 
