@@ -323,3 +323,104 @@ textarea {
 .btn:hover {
     background: #004bcc;
 }
+
+@media (max-width: 768px) {
+
+    /* Ocultar sidebar */
+    .sidebar {
+        display: none;
+    }
+
+    /* Contenido full width */
+    .content {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    /* Footer sin margen */
+    .site-footer {
+        margin-left: 0;
+        padding: 15px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+        padding: 10px;
+    }
+
+    /* Formulario centrado correctamente */
+    .form-container {
+        margin-left: 0;
+        margin-right: auto;
+        margin-left: auto;
+        width: 90%;
+    }
+
+    /* Intro más pequeña */
+    .intro {
+        padding: 20px;
+    }
+
+    .intro h1 {
+        font-size: 1.8rem;
+    }
+}
+@media (max-width: 480px) {
+
+    /* Padding más compacto */
+    .content {
+        padding: 15px;
+    }
+
+    /* Títulos más pequeños */
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    .intro {
+        padding: 1.8rem 1rem;
+    }
+
+    .intro h1 {
+        font-size: 1.45rem;
+    }
+
+    /* Formulario a 100% */
+    .form-container {
+        width: 100%;
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    input, textarea, select {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .btn {
+        padding: 10px;
+        font-size: 15px;
+    }
+
+    /* Footer en columna */
+    .footer-inner {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 6px;
+        align-items: center;
+    }
+
+    .footer-brand {
+        left: 0;
+        top: 0;
+        justify-content: center;
+    }
+  }

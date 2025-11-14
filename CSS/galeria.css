@@ -98,7 +98,7 @@ body {
 }
 
 /* si el logo es muy claro, aplicamos un sutil fondo - CSS "mejora" versión B */
-.brand .brand-text h1 {
+.brand .brand-text h2 {
     font-size: 1.15rem;
     margin: 0;
     font-weight: 700;
@@ -166,6 +166,7 @@ body {
   }
   
   .intro {
+    width: 75%;
     text-align: center;
     background: white;
     padding: 30px;
@@ -326,4 +327,91 @@ body {
 .content,
 .galeria {
     padding-bottom: 150px; /* espacio para el footer fijo */
+}
+/* ===============================
+   📱 TABLET (<= 768px)
+   =============================== */
+@media (max-width: 768px) {
+
+    /* Sidebar desaparece */
+    .sidebar {
+        display: none;
+    }
+
+    /* Contenido ocupa todo el ancho */
+    .content {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    /* Footer ya no fijo (para evitar que tape contenido) */
+    .site-footer {
+        position: static;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    /* Galería más compacta */
+    .galeria {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 15px;
+    }
+
+    /* Textos de intro más pequeños */
+    .intro h1 {
+        font-size: 1.8rem;
+    }
+
+    .intro p {
+        font-size: 1rem;
+    }
+}
+
+
+/* ===============================
+   📱📱 MÓVIL (<= 480px)
+   =============================== */
+@media (max-width: 480px) {
+
+    /* Ajustar padding general */
+    .content {
+        padding: 15px;
+    }
+
+    /* Intro más compacta */
+    .intro {
+        padding: 2.2rem 1.3rem;
+    }
+
+    .intro h1 {
+        font-size: 1.5rem;
+    }
+
+    .intro p {
+        font-size: 0.95rem;
+    }
+
+    /* Galería con columnas de 1 en pantallas muy pequeñas */
+    .galeria {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    /* Footer vertical */
+    .footer-inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .footer-brand {
+        left: 0;
+        top: 0;
+        justify-content: center;
+    }
 }

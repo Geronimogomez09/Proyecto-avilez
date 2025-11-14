@@ -404,7 +404,7 @@ body {
 }
 
 /* si el logo es muy claro, aplicamos un sutil fondo - CSS "mejora" versión B */
-.brand .brand-text h1 {
+.brand .brand-text h2 {
     font-size: 1.15rem;
     margin: 0;
     font-weight: 700;
