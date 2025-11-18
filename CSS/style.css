@@ -53,9 +53,9 @@ body {
     top: 0;
     left: 0;
     z-index: 100;
-    width: 30vw;
+    width: max(30vw, 200px);
     height: 100vh;
-    padding: 24px;
+    padding: 2vw;
     box-sizing: border-box;
     background: var(--sidebar-bg);
     border-right: 1px solid rgba(226, 226, 226, 0.836);
@@ -67,7 +67,7 @@ body {
     -webkit-text-stroke-width: 0.5px;
 }
 
-main {
+.contenido {
     width: 70vw;
     position: absolute;
     top: 0;
@@ -79,7 +79,7 @@ main {
     box-sizing: border-box;
 }
 
-main article {
+.contenido article {
     padding: 30px;
 }
 
@@ -97,9 +97,9 @@ main article {
 }
 
 .hero-blur {
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     font-size: 1.2vw;
-    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-width: 0.5px;
     background: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(5px);
     padding: 20px;
@@ -109,23 +109,21 @@ main article {
 
 .hero-blur h2 {
     font-size: 2vw;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
 }
 
 
-main article{
+.contenido{
     background-color: rgba(197, 197, 197, 0.7);
     backdrop-filter: blur(100px);
     /*
     background-image: url(../imagenes/principal/fondo6.jpg);
     background-size: cover;
     background-position: center center;
-    display: flex;
-    flex-direction: column;
     */
 }
 
-main article section article{
+.contenido article section article{
     background-color: rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(10px);
 }
@@ -152,9 +150,9 @@ main article section article{
     margin: 20px;
     box-sizing: border-box;
     border-radius: 10px;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     font-size: 1.2vw;
-    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-width: 0.5px;
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -202,6 +200,7 @@ main article section article{
 .card img {
     width: 100%;
     height: 100%;
+    border-radius: 20px;
     object-fit: cover;
     display: block;
     position: absolute;
@@ -285,7 +284,7 @@ main article section article{
     padding: 5px;
 }
 
-.logo-img {
+.logo-img, .footer-logo{
     width: 64px;
     height: 64px;
     object-fit: cover;
@@ -353,64 +352,35 @@ main article section article{
     font-size: 0.92rem;
 }
 
-
-
 /* ===== FOOTER ===== */
-.site-footer {
-    background-color: rgb(226, 226, 226);
-    border-top: 1px solid #e8e8e8;
-    color: var(--muted);
-    padding: 20px;
+footer, .footer-links{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
     box-sizing: border-box;
-    display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.footer-inner {
-    max-width: var(--max-width);
-    margin: 0 auto;
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.footer-logo {
-    width: 60px;
-    height: 60px;
-    object-fit: cover;
-    border-radius: 18px;
-}
-
-.footer-links {
-    display: flex;
-    gap: 20px;
-}
-
-.footer-links .fcol {
-    min-width: 140px;
-}
-
-.footer-brand {
-    display: flex;
-    align-items: center;
-    position: relative;
-    top: -20px;
-    gap: 10px;
-    left: -30px;
+    justify-content: space-around;
+    padding: 20px;
     text-align: center;
-    justify-content: space-between;
+    background-color: rgba(251, 255, 31, 0.507);
+}
+.fcol{
+    width: 20vw;
+}
+.footer-links{
+        border-radius: 40px;
+        margin: 20px;
+}
+.footer-brand{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.footer-logo{
+    width: 100px;
+    height: 100px; 
+    object-fit: cover;
+    border-radius: 20px;
+    margin: 5px;
 }
 
-
-
-/* small screens footer stacks */
-@media(max-width:700px) {
-    .footer-inner {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 12px;
-    }
-}
