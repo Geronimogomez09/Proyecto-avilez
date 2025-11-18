@@ -39,7 +39,7 @@ body {
 
 }
 
-main{
+.contenido {
     width: 70vw;
     position: absolute;
     top: 0;
@@ -51,17 +51,10 @@ main{
     box-sizing: border-box;
 }
 
-main article{
-        padding: 30px;
-        
-}
-/* small screens footer stacks */
-@media(max-width:700px) {
-    .footer-inner {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 12px;
-    }
+
+.contenido article section article{
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
 }
 /* ------------------------ IMAGEN PRINCIPAL ---------------- */
 .imagen {
@@ -216,10 +209,7 @@ button:hover {
     transform: scale(1.05);
 }
 
-/* ------------------------ OPINIONES ------------------------ */
-/* ------------------------ OPINIONES (ESTILO MINIMALISTA) ------------------------ */
 
-/* ------------------------ OPINIONES ------------------------ */
 .opiniones {
     display: flex;
     flex-direction: column;
@@ -241,16 +231,27 @@ button:hover {
 /* ------------------------ TARJETA DE COMENTARIO ------------------------ */
 .comentario-card {
     width: 100%;
-    max-width: 850px;
+    max-width: 700px;
     background: #ffffff;
     border-radius: 14px;
     padding: 1.5rem;
-    border: 1px solid #e5e5e5;
+    border: 2px solid #000000;
     box-shadow: 0 2px 8px rgba(0,0,0,0.07);
     margin-bottom: 1.5rem;
     transition: 0.2s ease;
 }
+.comentarios-content{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    margin: 2rem auto;
+    border-radius: 20px;
+    box-sizing: border-box;
 
+}
 .comentario-card:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 16px rgba(0,0,0,0.1);
@@ -280,7 +281,7 @@ button:hover {
     background: #f5f5f5;
     padding: 1rem;
     border-radius: 10px;
-    color: #222;
+    color: #2b2b2b;
     font-size: 1rem;
     line-height: 1.5;
     margin: 1rem 0;
@@ -686,63 +687,36 @@ body {
 
 
 /* ===== FOOTER ===== */
-.site-footer {
-    background-color: rgb(226, 226, 226);
-    border-top: 1px solid #e8e8e8;
-    color: var(--muted);
-    padding: 20px;
+footer, .footer-links{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
     box-sizing: border-box;
-    display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin-top: 30px;
-    gap: 20px;
-}
-
-.footer-inner {
-    max-width: var(--max-width);
-    margin: 0 auto;
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    padding: 30px;
-    justify-content: space-between;
-}
-
-.footer-logo {
-    width: 60px;
-    height: 60px;
-    object-fit: cover;
-    border-radius: 18px;
-}
-
-.footer-links {
-    display: flex;
-    gap: 20px;
-}
-
-.footer-links .fcol {
-    min-width: 140px;
-}
-
-.footer-brand {
-    display: flex;
-    align-items: center;
-    position: relative;
-    top: -20px;
-    gap: 10px;
-    left: -30px;
+    justify-content: space-around;
+    padding: 20px;
+    color: #555;
     text-align: center;
-    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.596);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 }
-
-
-
-/* small screens footer stacks */
-@media(max-width:700px) {
-    .footer-inner {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 12px;
-    }
+.fcol{
+    width: 20vw;
+}
+.footer-links{
+        border-radius: 40px;
+        margin: 20px;
+}
+.footer-brand{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.footer-logo{
+    width: 100px;
+    height: 100px; 
+    object-fit: cover;
+    border-radius: 20px;
+    margin: 5px;
 }

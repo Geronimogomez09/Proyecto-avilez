@@ -60,6 +60,7 @@ $resultado = mysqli_query($conn, "SELECT * FROM comentario where id_receta=2");
             <!-- Login vertical abajo -->
             
         </aside>
+        <aside class="contenido">
     <main>
         <div class="imagen">
             <img src="../imagenes/bizcochuelo_de_vainilla.webp" alt="Bizcochuelo_de_Vainilla">
@@ -106,7 +107,7 @@ $resultado = mysqli_query($conn, "SELECT * FROM comentario where id_receta=2");
     </div>
         <div class="opiniones" id="opiniones">
     <div class="mx-3 p-2" style="max-width: 900px;">
-
+        <div class="comentarios-content">
         <?php while ($fila = mysqli_fetch_assoc($resultado)) { ?>
             <!-- Tarjeta -->
             <div class="comentario-card">
@@ -131,7 +132,7 @@ $resultado = mysqli_query($conn, "SELECT * FROM comentario where id_receta=2");
 
             </div>
         <?php } ?>
-
+        </div>
         <!-- Botón Agregar -->
         <a class="btn btn-outline-dark m-3" href="agregar2.php">Agregar comentario</a>
     </div>
@@ -154,6 +155,7 @@ $resultado = mysqli_query($conn, "SELECT * FROM comentario where id_receta=2");
                 </div>
             </footer>
     </main>
+    </aside>
     <script src="../main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>

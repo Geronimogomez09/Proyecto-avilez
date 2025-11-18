@@ -62,6 +62,7 @@ $resultado = mysqli_query($conn, "SELECT * FROM comentario where id_receta=1");
         <!-- Login vertical abajo -->
 
     </aside>
+    <aside class="contenido">
     <main>
 
         <div class="imagen">
@@ -167,37 +168,22 @@ $resultado = mysqli_query($conn, "SELECT * FROM comentario where id_receta=1");
         <a class="btn btn-outline-dark m-3" href="agregar.php">Agregar comentario</a>
     </div>
 </div>
-
-
-        <footer class="site-footer">
-            <div class="footer-inner">
-                <div class="footer-brand">
-                    <img src="../imagenes/principal/Logo.png" alt="Logo"
-                        class="footer-logo">
-                    <h2 class="h2">Kitty claus</h2>
-                </div>
-                <div class="footer-links">
-                    <div class="fcol">
-                        <h4 class="h4">Acerca</h4>
-                        <p>Recetas,
-                            tips y
-                            más.</p>
-                    </div>
-                    <div
-                        class="fcol">
-                        <h4
-                            class="h4">Contacto</h4>
-                        <p>contacto@recetas.example</p>
-                    </div>
-                    <div class="fcol">
-                        <h4 class="h4">Legal</h4>
-                        <p>Términos y
-                            privacidad</p>
-                    </div>
-                </div>
-            </div>
-        </footer>
     </main>
+    <footer class="site-footer">
+                    <div class="footer-brand">
+                        <img src="imagenes/principal/Logo.png" alt="Logo" class="footer-logo">
+                        <h2 class="h2">Kitty claus</h2>
+                    </div>
+                    <div class="footer-links">
+                        <div class="fcol"><h4 class="h4">Acerca</h4><p>Recetas, tips y
+                                más.</p></div>
+                        <div
+                            class="fcol"><h4 class="h4">Contacto</h4><p>gmail@gmail.com</p></div>
+                        <div class="fcol"><h4 class="h4">Legal</h4><p>Términos y
+                                privacidad</p></div>
+                    </div>
+            </footer>
+    </aside>
 
     <script src="../main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
