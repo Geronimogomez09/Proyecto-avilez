@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contactos - Kitty Claus</title>
+  <link rel="stylesheet" href="CSS/contactos.css">
+  <link rel="icon" href="imagenes/principal/Logo.png">
+</head>
+<body>
+<header>
+    
+  <div class="container">
+
+    <!-- NAV LATERAL (COPIADO TAL CUAL DEL INDEX) -->
+    <aside class="sidebar">
+            <div class="sidebar-top">
+                <div class="brand">
+                    <!-- Logo redondeado; la imagen real debe estar en imagenes/Logo.png -->
+                    <img src="imagenes/principal/Logo.png" alt="Logo" class="logo-img">
+                    <div class="brand-text">
+                        <h1>Kitty claus</h1>
+                        <small>¡Recetas Especiales!</small>
+                    </div>
+                </div>
+      
+        <!-- NAV nuevo con las clases correctas -->
+        <nav class="nav-cards">
+          <h3 class="nav-title">Navegación</h3>
+          <div class="nav-items">
+            <a href="index.html" class="nav-item">Inicio</a>
+            <a href="galeria.html" class="nav-item active">Galería</a>
+           </div>
+        </nav>
+      
+        <div class="anuncio">
+          <h4>Anuncio</h4>
+          <p>Nueva sección: recetas fáciles en 30 minutos 🍳</p>
+        </div>
+
+        </div>
+      </aside>
+      </div>
+</header>
+
+      <main>
+
+        <div class="form-container">
+    <h2>Formulario de Contacto</h2>
+
+    <form action="#" method="POST">
+        
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" placeholder="email@ejemplo.com" required>
+
+        <label for="telefono">Número de teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" placeholder="+54 9 11 0000 0000" pattern="[0-9+ ]{6,}" required>
+
+        <label for="asunto">Asunto:</label>
+        <select id="asunto" name="asunto" required>
+            <option value="">Selecciona una opción</option>
+            <option value="consulta">Consulta general</option>
+            <option value="soporte">Soporte técnico</option>
+            <option value="trabajo">Enviar CV / Trabajo</option>
+        </select>
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribí tu mensaje aquí..." required></textarea>
+        <button type="submit" class="btn">Enviar mensaje</button>
+    </form>
+
+</div>
+
+
+      </main>
+  <footer class="site-footer">
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <img src="imagenes/principal/Logo.png" alt="Logo" class="footer-logo">
+            <h2 class="h2">Kitty claus</h2>
+        </div>
+        <div class="footer-links">
+            <div class="fcol"><h4 class="h4">Acerca</h4><p>Recetas, tips y
+                    más.</p></div>
+            <div
+                class="fcol"><h4 class="h4">Contacto</h4><p>contacto@recetas.example</p></div>
+            <div class="fcol"><h4 class="h4">Legal</h4><p>Términos y
+                    privacidad</p></div>
+        </div>
+    </div>
+</footer>
+  <script src="js/script.js"></script>
+</body>
+</html>

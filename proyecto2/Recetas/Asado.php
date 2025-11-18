@@ -1,0 +1,206 @@
+<?php
+$conn = mysqli_connect("localhost", "root", "", "comentarios_db");
+$resultado = mysqli_query($conn, "SELECT * FROM comentario where id_receta=1");
+?>
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asado Argentino Tradicional</title>
+    <link rel="stylesheet" href="recetas.css">
+    <link rel="icon" href="../imagenes/principal/Logo.png">
+</head>
+
+<body>
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-top">
+            <div class="brand">
+                <!-- Logo redondeado; la imagen real debe estar en imagenes/Logo.png -->
+                <img src="../imagenes/principal/Logo.png" alt="Logo"
+                    class="logo-img" />
+                <div class="brand-text">
+                    <h1>Kitty claus</h1>
+                    <small>¡Recetas Especiales!</small>
+                </div>
+            </div>
+
+            <!-- NAV: tarjetas minimalistas -->
+            <nav class="nav-cards" aria-label="Géneros de comida">
+                <h2 class="nav-title h2">Secciones</h2>
+                <div class="nav-items">
+                    <a href="#div1" class="nav-item">Autor</a>
+                    <a href="#div2" class="nav-item">Ingredientes</a>
+                    <a href="#div3" class="nav-item">Receta</a>
+                    <a href="#opiniones" class="nav-item">Calificaciones</a>
+                </div>
+                <nav class="nav-cards">
+                    <h2 class="nav-title h2">Volver a inicio</h2>
+                    <div class="nav-items">
+                        <a href="../index.html" class="nav-item">Volver</a>
+                    </div>
+                    <h2 class="nav-title h2">Galeria:</h2>
+                    <div class="nav-items">
+                        <a href="../galeria.html" class="nav-item">Ir
+                            galeria</a>
+                    </div>
+                </nav>
+            </nav>
+        </div>
+
+        <!-- Anuncio -->
+        <div class="sidebar-mid">
+            <div class="anuncio">
+                <h3>Anuncio</h3>
+                <p>Nueva sección: recetas fáciles en 30 minutos.
+                    Próximamente: videos.</p>
+            </div>
+        </div>
+
+        <!-- Login vertical abajo -->
+
+    </aside>
+    <main>
+
+        <div class="imagen">
+            <img src="../imagenes/principal/Asado.png" alt="Asado Imagen">
+            <div class="descripcion">
+                <h1>Asado Argentino Tradicional</h1>
+                <p>
+                    El asado argentino es mucho más que una comida: es una
+                    tradición, un ritual y una forma de compartir. Preparado
+                    a fuego lento sobre brasas, cada corte de carne adquiere
+                    un sabor ahumado inigualable. Acompañado de un buen
+                    chimichurri, ensaladas frescas y pan casero, el asado
+                    representa la esencia de la cocina criolla y el
+                    encuentro familiar.
+                </p>
+            </div>
+        </div>
+        <div class="parent">
+            <div class="div1" id="div1">
+                <h2>Autor</h2>
+                <h3>Gerónimo Gómez </h3>
+                <img src="../imagenes/principal/chef_gero.jpg"
+                    alt="Imagen_chef_gero">
+                <p>
+                    Amante de la cocina criolla y las tradiciones
+                    argentinas. Inspirado por los domingos en familia y el
+                    sabor único del asado a la parrilla.
+                </p>
+            </div>
+            <div class="div2" id="div2">
+                <h2>Ingredientes</h2>
+                <h3>Para el Asado</h3>
+                <ul>
+                    <li>2 kg de costillas de res</li>
+                    <li>1 kg de vacío o entraña</li>
+                    <li>1 kg de chorizos</li>
+                    <li>1 kg de morcillas</li>
+                    <li>1 kg de pollo (opcional)</li>
+                    <li>Sal gruesa a gusto</li>
+                </ul>
+                <h3>Para el chimichurri:</h3>
+                <ul>
+                    <li>1 taza de aceite</li>
+                    <li>½ taza de vinagre</li>
+                    <li>3 dientes de ajo picados</li>
+                    <li>1 cucharada de perejil fresco picado</li>
+                    <li>Sal y pimienta a gusto</li>
+                </ul>
+            </div>
+            <div class="div3" id="div3">
+                <h2>Receta</h2>
+                <ol>
+                    <li>Preparar el fuego: encender el carbón o la leña con
+                        suficiente antelación (unos 30–40 minutos) hasta
+                        obtener brasas parejas.</li>
+                    <li>Salado de la carne: salar la carne con sal gruesa
+                        justo antes de colocarla en la parrilla.</li>
+                    <li>Cocción lenta: colocar las costillas del lado del
+                        hueso hacia abajo, a fuego medio. Cocinar durante 1
+                        hora aproximadamente.</li>
+                    <li>Agregar el resto: incorporar chorizos, morcillas y
+                        pollo a la parrilla. Girar las carnes de vez en
+                        cuando para una cocción uniforme.</li>
+                    <li>Preparar el chimichurri: mezclar todos los
+                        ingredientes en un recipiente y dejar reposar unos
+                        minutos para intensificar el sabor.</li>
+                    <li>Servir y disfrutar: retirar la carne cuando esté
+                        dorada y jugosa. Acompañar con chimichurri,
+                        ensaladas y pan.</li>
+                </ol>
+
+            </div>
+        </div>
+            <div class="opiniones" id="opiniones">
+    <div class="mx-3 p-2" style="max-width: 900px;">
+
+        <?php while ($fila = mysqli_fetch_assoc($resultado)) { ?>
+            <!-- Tarjeta -->
+            <div class="comentario-card">
+
+                <!-- Nombre + Valor -->
+                <div class="com-header">
+                    <strong><?= $fila['nombre'] ?></strong>
+                    <p>valoración: <span class="valor"><?= $fila['valor'] ?></span>/5</p>
+                </div>
+
+                <!-- Comentario -->
+                <div class="comentario-texto">
+                    <?= $fila['coment'] ?>
+                </div>
+
+                <!-- Botones -->
+                <div class="comentario-botones">
+                    <a class="btn-op" href="editar.php?id=<?= $fila['id'] ?>">Editar</a>
+                    <a class="btn-op" href="eliminar.php?id=<?= $fila['id'] ?>"
+                        onclick="return confirm('¿Estás seguro?')">Eliminar</a>
+                </div>
+
+            </div>
+        <?php } ?>
+
+        <!-- Botón Agregar -->
+        <a class="btn btn-outline-dark m-3" href="agregar.php">Agregar comentario</a>
+    </div>
+</div>
+
+
+        <footer class="site-footer">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <img src="../imagenes/principal/Logo.png" alt="Logo"
+                        class="footer-logo">
+                    <h2 class="h2">Kitty claus</h2>
+                </div>
+                <div class="footer-links">
+                    <div class="fcol">
+                        <h4 class="h4">Acerca</h4>
+                        <p>Recetas,
+                            tips y
+                            más.</p>
+                    </div>
+                    <div
+                        class="fcol">
+                        <h4
+                            class="h4">Contacto</h4>
+                        <p>contacto@recetas.example</p>
+                    </div>
+                    <div class="fcol">
+                        <h4 class="h4">Legal</h4>
+                        <p>Términos y
+                            privacidad</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="../main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+
+</html>

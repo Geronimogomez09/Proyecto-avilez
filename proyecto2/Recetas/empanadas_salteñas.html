@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empanadas Salteñas</title>
+    <link rel="stylesheet" href="../CSS/recetas.css">
+    <link rel="icon" href="../imagenes/principal/Logo.png">
+</head>
+<body>
+                <aside class="sidebar" id="sidebar">
+            <div class="sidebar-top">
+                <div class="brand">
+                    <!-- Logo redondeado; la imagen real debe estar en imagenes/Logo.png -->
+                    <img src="../imagenes/principal/Logo.png" alt="Logo" class="logo-img" >
+                    <div class="brand-text">
+                        <h2>Kitty claus</h2>
+                        <small>¡Recetas Especiales!</small>
+                    </div>
+                </div>
+
+                <!-- NAV: tarjetas minimalistas -->
+                <nav class="nav-cards" aria-label="Géneros de comida">
+                    <h2 class="nav-title h2">Secciones</h2>
+                    <div class="nav-items">
+                        <a href="#div1" class="nav-item">Autor</a>
+                        <a href="#div2" class="nav-item">Ingredientes</a>
+                        <a href="#div3" class="nav-item">Receta</a>
+                        <a href="#opiniones" class="nav-item">Calificaciones</a>
+                    </div>
+                    <nav class="nav-cards">
+                    <h2 class="nav-title h2">Volver a  inicio</h2>
+                    <div class="nav-items">
+                        <a href="../index.html" class="nav-item">Volver</a>
+                    </div>
+                    <h2 class="nav-title h2">Galeria:</h2>
+                    <div class="nav-items">
+                        <a href="../galeria.html" class="nav-item">Ir galeria</a>
+                    </div>
+                    </nav>
+                </nav>
+            </div>
+
+            <!-- Anuncio -->
+            <div class="sidebar-mid">
+                <div class="anuncio">
+                    <h3>Anuncio</h3>
+                    <p>Nueva sección: recetas fáciles en 30 minutos.
+                        Próximamente: videos.</p>
+                </div>
+            </div>
+
+            <!-- Login vertical abajo -->
+            
+        </aside>
+    <main>
+        <div class="imagen">
+            <img src="../imagenes/empanadas_salteñas.jpg" alt="empanadas_salteñas">
+            <div class="descripcion">
+            <h1>Empanadas Salteñas</h1>
+            <p>
+            Las empanadas salteñas son un clásico del norte argentino. Rellenas con carne cortada a cuchillo, papa, huevo y condimentos,
+    se caracterizan por su sabor jugoso y masa dorada.
+            </p>
+            </div>
+        </div>
+    <div class="parent">
+        <div class="div1" id="div1">           
+        <h2>Autor</h2>
+        <h3>Gerónimo Gómez </h3>
+        <img src="../imagenes/principal/chef_gero.jpg" alt="Imagen_chef_gero">
+        <p>
+            Amante de la cocina criolla y las tradiciones argentinas. Inspirado por los domingos en familia y el sabor único del asado a la parrilla.
+        </p>
+        </div>
+        <div class="div2" id="div2">    
+        <h2>Ingredientes</h2>
+        <h3>Para las Empanadas</h3>
+            <ul>
+                <li>500 g de carne cortada a cuchillo</li>
+                <li>2 papas</li>
+                <li>2 cebollas</li>
+                <li>1 huevo duro</li>
+                <li>Comino, pimentón, sal y ají molido</li>
+                <li>Tapas para empanadas</li>
+            </ul>
+        </div>
+        <div class="div3" id="div3">
+                <h2>Receta</h2>
+            <ol>
+                <li>Pelar y cortar las papas en cubos pequeños. Hervir hasta que estén tiernas y reservar.</li>
+                <li>Picar las cebollas y saltearlas con grasa o aceite hasta que estén transparentes.</li>
+                <li>Agregar la carne y cocinar hasta que se dore ligeramente.</li>
+                <li>Condimentar con comino, pimentón y ají molido al gusto.</li>
+                <li>Agregar las papas cocidas, mezclar y dejar enfriar completamente.</li>
+                <li>Incorporar el huevo duro picado.</li>
+                <li>Rellenar las tapas, cerrar con repulgue y colocar en bandeja enharinada.</li>
+                <li>Hornear a 200 °C por 20 minutos o freír en aceite caliente hasta dorar.</li>
+            </ol>
+        </div>
+    </div>
+            <div class="opiniones" id="opiniones">
+            <h2>Califica esta receta y deja tu opinión</h2>
+            
+            <div class="rating">
+                <input type="radio" name="star" id="star5" value="5"><label for="star5">★</label>
+                <input type="radio" name="star" id="star4" value="4"><label for="star4">★</label>
+                <input type="radio" name="star" id="star3" value="3"><label for="star3">★</label>
+                <input type="radio" name="star" id="star2" value="2"><label for="star2">★</label>
+                <input type="radio" name="star" id="star1" value="1"><label for="star1">★</label>
+            </div>
+            
+            <div class="enviar">
+            <p id="valor">Selecciona una calificación</p>
+            
+            <textarea id="opinion" placeholder="Escribe tu opinión aquí..."></textarea><br>
+            <button id="enviar">Enviar opinión</button>
+            </div>
+            </div>
+                            <footer class="site-footer">
+                <div class="footer-inner">
+                    <div class="footer-brand">
+                        <img src="../imagenes/principal/Logo.png" alt="Logo" class="footer-logo">
+                        <h2 class="h2">Kitty claus</h2>
+                    </div>
+                    <div class="footer-links">
+                        <div class="fcol"><h4 class="h4">Acerca</h4><p>Recetas, tips y
+                                más.</p></div>
+                        <div
+                            class="fcol"><h4 class="h4">Contacto</h4><p>contacto@recetas.example</p></div>
+                        <div class="fcol"><h4 class="h4">Legal</h4><p>Términos y
+                                privacidad</p></div>
+                    </div>
+                </div>
+            </footer>
+    </main>
+    <script src="../main.js"></script>
+</body>
+</html>

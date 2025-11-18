@@ -1,0 +1,417 @@
+  :root {
+    --bg: #ffffff;
+    --text: #b71c1c;
+    --green-accent: rgb(0, 255, 20);
+    /* CTA principal */
+    --green-primary: #006644;
+    /* verde principal elegante */
+    --blue: #0077cc;
+    --yellow: #00d6c4;
+    --red: #b71c1c;
+
+    --muted: #0f46b4;
+    --card-bg: #fafafa;
+    --sidebar-bg: #f7f9f8;
+    --glass: rgba(255, 255, 255, 0.6);
+    --glass-dark: rgba(255, 255, 255, 0.06);
+
+    --radius: 14px;
+    --transition: 260ms;
+    --max-width: 1200px;
+    --gap: 16px;
+    --font: "Poppins", system-ui, Arial, sans-serif;
+
+}
+/* ---------- ESTILOS GENERALES ---------- */
+body {
+    margin: 0;
+    font-family: var(--font);
+    background: #f7f3ee;
+    color: #333;
+  }
+  
+  .container {
+    display: flex;
+  }
+  
+
+
+  /* ---------- SIDEBAR (MISMO DEL INDEX) ---------- */
+  .sidebar {
+    width: 280px;
+    background: #fff;
+    border-right: 2px solid #e3dfda;
+    padding: 20px;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.05);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+  }
+  
+  .logo-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+  
+  .logo {
+    width: 70px;
+    border-radius: 10px;
+    margin-right: 10px;
+  }
+  
+  .site-title {
+    color: #3f8c3f;
+    margin: 0;
+  }
+  
+  .tagline {
+    font-size: 14px;
+    color: #555;
+    margin: 2px 0 0;
+  }
+  
+ 
+  
+
+/* ===== BRAND (logo + title) ===== */
+.brand {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    border-bottom: 2px solid var(--red);
+    box-shadow: 0 5px 5px 0px var(--red);
+    border-radius: 2vw;
+    color: var(--red);
+    background-color: rgb(226, 226, 226);
+    padding: 5px;
+}
+
+.logo-img {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    border-radius: 22px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    border: 2px solid black;
+    filter: contrast(1.03) saturate(1.05);
+}
+
+/* si el logo es muy claro, aplicamos un sutil fondo - CSS "mejora" versión B */
+.brand .brand-text h2 {
+    font-size: 1.15rem;
+    margin: 0;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.brand .brand-text small {
+    color: var(--muted);
+    font-size: 0.90rem;
+        font-weight: 700;
+}
+
+/* ===== NAV: tarjetas minimalistas ===== */
+.nav-cards {
+    margin-top: 18px;
+}
+
+.nav-title {
+    font-size: 1.10rem;
+    color: var(--muted);
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.nav-items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 1.25rem;
+        font-weight: 600;
+}
+
+.nav-item {
+    display: block;
+    text-decoration: none;
+    color: var(--text);
+    background: rgb(226, 226, 226);
+    border: var(--blue) 1px solid;
+    padding: 10px 12px;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(16, 24, 24, 0.02);
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.nav-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.06);
+}
+
+/* ===== ANUNCIO ===== */
+.anuncio {
+    background: #fff;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #eee;
+    color: var(--muted);
+    font-size: 1.18rem;
+}
+  
+  /* ---------- CONTENIDO PRINCIPAL ---------- */
+  .content {
+    margin-left: 300px;
+    padding: 30px;
+    width: 100%;
+  }
+  
+  .intro {
+    width: 75%;
+    text-align: center;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  }
+  
+  .intro h1 {
+    color: #3f8c3f;
+  }
+  
+  /* ---------- GALERÍA ---------- */
+  .galeria {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .galeria a {
+    display: block;
+    overflow: hidden;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .galeria a:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  }
+  
+  .galeria img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.4s ease;
+  }
+  
+  .galeria a:hover img {
+    transform: scale(1.1);
+  }
+  
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width: 768px) {
+    .sidebar {
+      display: none;
+    }
+  
+    .content {
+      margin-left: 0;
+      padding: 20px;
+    }
+  }
+  /*imagen detras del texto we nomames*/
+  .intro {
+    position: relative;
+    background-image: url("../imagenes/principal/fondo80.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    padding: 3rem 2rem;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  }
+  
+  /* Capa de filtro borroso o claro encima de la imagen */
+  .intro::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.10); /* menos blanco, se nota más el fondo */
+    backdrop-filter: blur(3px); /* un poco menos borroso */
+    z-index: 0;
+  }
+  
+  /* Texto por encima del filtro */
+  .intro h1, .intro p {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .intro h1 {
+    font-size: 2.2rem;
+    color: #fff;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  }
+  
+  .intro p {
+    font-size: 1.1rem;
+    color: #f0f0f0;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
+  }
+  
+
+/* ===== FOOTER ===== */
+.site-footer {
+    background-color: rgb(226, 226, 226);
+    border-top: 1px solid #e8e8e8;
+    color: var(--muted);
+    padding: 10px 20px; 
+    box-sizing: border-box;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    gap: 20px;
+
+    /* 🔥 Para dejarlo fijo al fondo */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 81%;
+    z-index: 10;
+    margin-left: 322px;
+    box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.05);
+}
+
+.footer-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 5px 20px;
+    justify-content: space-between;
+}
+
+.footer-logo {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 18px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links .fcol {
+    min-width: 140px;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    top: -5px;
+    left: -10px;
+}
+
+/* 🌸 Para que no tape el contenido de la galería */
+.content,
+.galeria {
+    padding-bottom: 150px; /* espacio para el footer fijo */
+}
+/* ===============================
+   📱 TABLET (<= 768px)
+   =============================== */
+@media (max-width: 768px) {
+
+    /* Sidebar desaparece */
+    .sidebar {
+        display: none;
+    }
+
+    /* Contenido ocupa todo el ancho */
+    .content {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    /* Footer ya no fijo (para evitar que tape contenido) */
+    .site-footer {
+        position: static;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    /* Galería más compacta */
+    .galeria {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 15px;
+    }
+
+    /* Textos de intro más pequeños */
+    .intro h1 {
+        font-size: 1.8rem;
+    }
+
+    .intro p {
+        font-size: 1rem;
+    }
+}
+
+
+/* ===============================
+   📱📱 MÓVIL (<= 480px)
+   =============================== */
+@media (max-width: 480px) {
+
+    /* Ajustar padding general */
+    .content {
+        padding: 15px;
+    }
+
+    /* Intro más compacta */
+    .intro {
+        padding: 2.2rem 1.3rem;
+    }
+
+    .intro h1 {
+        font-size: 1.5rem;
+    }
+
+    .intro p {
+        font-size: 0.95rem;
+    }
+
+    /* Galería con columnas de 1 en pantallas muy pequeñas */
+    .galeria {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    /* Footer vertical */
+    .footer-inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .footer-brand {
+        left: 0;
+        top: 0;
+        justify-content: center;
+    }
+}

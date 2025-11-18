@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Kitty claus-Inicio</title>
+        <link rel="icon" href="imagenes/principal/Logo.png">
+        <!-- Tipografía -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+            rel="stylesheet">
+
+        <!-- Estilos -->
+        <link rel="stylesheet" href="CSS/style.css">
+    </head>
+    <body>
+
+        <!-- ======= HEADER LATERAL FIJO ======= -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-top">
+                <div class="brand">
+                    <!-- Logo redondeado; la imagen real debe estar en imagenes/Logo.png -->
+                    <img src="imagenes/principal/Logo.png" alt="Logo" class="logo-img">
+                    <div class="brand-text">
+                        <h1>Kitty claus</h1>
+                        <small>¡Recetas Especiales!</small>
+                    </div>
+                </div>
+
+                <!-- NAV: tarjetas minimalistas -->
+                <nav class="nav-cards" aria-label="Géneros de comida">
+                    <h2 class="nav-title h2">Géneros de Comida</h2>
+                    <div class="nav-items">
+                        <a href="#Carnes" class="nav-item">Carnes y Parrilla</a>
+                        <a href="#Pasteleria" class="nav-item">Pastelería y
+                            Postres</a>
+                        <a href="#Regional" class="nav-item">Comidas
+                            Regionales</a>
+                        <a href="#Panificados" class="nav-item">Panificados y
+                            Masas</a>
+                        <a href="#Vegetarianas" class="nav-item">Vegetarianos y
+                            Ensaladas</a>
+                    </div>
+                    <nav class="nav-cards">
+                    <h2 class="nav-title h2">Galeria:</h2>
+                    <div class="nav-items">
+                        <a href="galeria.html" class="nav-item">Galeria</a>
+                    </div>
+                    <h2 class="nav-title h2">Contacto:</h2>
+                    <div class="nav-items">
+                        <a href="contactos.html" class="nav-item">Contacto</a>
+                    </div>
+                    </nav>
+                </nav>
+            </div>
+
+            <!-- Anuncio -->
+            <div class="sidebar-mid">
+                <div class="anuncio">
+                    <h3>Anuncio</h3>
+                    <p>Nueva sección: recetas fáciles en 30 minutos.
+                        Próximamente: videos.</p>
+                </div>
+            </div>
+
+            <!-- Login vertical abajo -->
+            
+        </aside>
+
+        <aside class="contenido">
+        <main class="main">
+            <!-- HERO / HEADER (efecto cristal) -->
+            <section class="hero">
+                <div class="hero-blur">
+                    <h2 class="titulo-brillante h2">Bienvenidos a nuestra colección
+                        de recetas</h2>
+                    <p class="lead">Recetas tradicionales y de autor, paso a
+                        paso. Explora por categorías o usa los carruseles para
+                        navegar.</p>
+                </div>
+
+            <!-- INTRO -->
+            <div class="intro">
+                <h3 class="subtitulo-brillante">Introducción</h3>
+                <p>Encuentra recetas organizadas por categorías. Cada receta
+                    incluye tiempo de cocción, valoración y autor. Haz click en
+                    la imagen para ver la receta completa.</p>
+            </div >
+            </section>
+
+            <!-- CARRUSELES / CATEGORIAS -->
+            <article class="catalogo">
+                <h2>¡Recetas deliciosas!</h2>
+                <!-- Cada sección de categoria: id coincide con nav anchor -->
+                <section id="Carnes" class="categoria">
+                    <div class="cat-head">
+                        <h3>Carnes y Parrilla</h3>
+                        <div class="controls">
+                            <button class="prev" data-target="carnes">◀</button>
+                            <button class="next" data-target="carnes">▶</button>
+                        </div>
+                    </div>
+                    <div class="carousel" data-carousel="carnes">
+                        <!-- 6 items; si faltan, dejar href="#" para completar luego -->
+                        <article class="card">
+                            <a href="Recetas/Asado.php">
+                                <img src="imagenes/principal/Asado.png" alt="Asado Tradicional">
+                            <div class="meta">
+                                <h4 class="h4">Asado Argentino</h4>
+                                <p class="info">Tiempo: 2 h • ★★★★☆ • Autor:
+                                    Geronimo Gomez</p>
+                            </div>
+                            </a>
+                        </article>
+
+                        <article class="card">
+                            <a href="recetas/milanesas_con_pure.html"><img
+                                    src="imagenes/milanesas_con_pure.jpeg"
+                                    alt="Milanesas">
+                            <div class="meta">
+                                <h4 class="h4">Milanesas con Puré</h4>
+                                <p class="info">Tiempo: 45 min • ★★★★☆ • Autor:
+                                    Geronimo Gomez</p>
+                            </div>
+                            </a>
+                        </article>
+
+                        <article class="card">
+                            <a href="recetas/pollo_al_horno.html"><img
+                                    src="imagenes/pollo_al_horno.webp"
+                                    alt="Pollo al horno">
+                            <div class="meta">
+                                <h4 class="h4">Pollo al Horno</h4>
+                                <p class="info">Tiempo: 1 h • ★★★★☆ • Autor:
+                                    Pedro Pascal</p>
+                            </div>
+                            </a>
+                        </article>
+
+                        <article class="card">
+                            <a href="recetas/provoleta.html"><img
+                                    src="imagenes/provoleta.jpg"
+                                    alt="Provoleta">
+                            <div class="meta">
+                                <h4 class="h4">Provoleta</h4>
+                                <p class="info">Tiempo: 15 min • ★★★★☆ • Autor:
+                                    Pedro Pascal</p>
+                            </div>
+                            </a>
+                        </article>
+
+                        <article class="card placeholder">
+                            <a href="#"><img src="imagenes/placeholder.jpg"
+                                    alt="Próxima receta"></a>
+                            <div class="meta">
+                                <h4 class="h4">Próxima receta</h4>
+                                <p class="info">Pendiente • • Autor: —</p>
+                            </div>
+                        </article>
+
+                        <article class="card placeholder">
+                            <a href="#"><img src="imagenes/placeholder.jpg"
+                                    alt="Próxima receta"></a>
+                            <div class="meta">
+                                <h4 class="h4">Próxima receta</h4>
+                                <p class="info">Pendiente • • Autor: —</p>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Pastelería y Postres -->
+                <section id="Pasteleria" class="categoria">
+                    <div class="cat-head">
+                        <h3>Pastelería y Postres</h3>
+                        <div class="controls">
+                            <button class="prev"
+                                data-target="pasteleria">◀</button>
+                            <button class="next"
+                                data-target="pasteleria">▶</button>
+                        </div>
+                    </div>
+                    <div class="carousel" data-carousel="pasteleria">
+                        <article class="card">
+                            <a href="recetas/Bizcochuelo_de_Vainilla.php"><img
+                                    src="imagenes/bizcochuelo_de_vainilla.webp"
+                                    alt="Bizcochuelo">
+                            <div class="meta">
+                                <h4 class="h4">Bizcochuelo de Vainilla</h4>
+                                <p class="info">Tiempo: 1 h • ★★★★☆ • Autor:
+                                    Lautaro Martínez</p>
+                            </div>
+                            </a>
+                        </article>
+
+                        <article class="card">
+                            <a href="recetas/flan_casero.html"><img
+                                    src="imagenes/flan_casero.jpeg"
+                                    alt="Flan casero">
+                            <div class="meta">
+                                <h4 class="h4">Flan Casero</h4>
+                                <p class="info">Tiempo: 1 h • ★★★★☆ • Autor:
+                                    Pedro Pascal</p>
+                            </div>
+                            </a>
+                        </article>
+
+                        <article class="card">
+                            <a href="recetas/torta_de_chocolate.html"><img
+                                    src="imagenes/torta_de_chocolate.JPG"
+                                    alt="Torta de chocolate">
+                            <div class="meta">
+                                <h4 class="h4">Torta de Chocolate</h4>
+                                <p class="info">Tiempo: 1.5 h • ★★★★★ • Autor:
+                                    Lautaro Martínez</p>
+                            </div>
+                            </a>
+                        </article>
+
+                        <article class="card placeholder"><a href="#"><img
+                                    src="imagenes/placeholder.jpg" alt></a>
+                            <div class="meta"><h4 class="h4">Próxima</h4><p
+                                    class="info">Pendiente</p></div>
+                        </article>
+
+                        <article class="card placeholder"><a href="#"><img
+                                    src="imagenes/placeholder.webp" alt></a>
+                            <div class="meta"><h4 class="h4">Próxima</h4><p
+                                    class="info">Pendiente</p></div>
+                        </article>
+
+                        <article class="card placeholder"><a href="#"><img
+                                    src="imagenes/placeholder.jpg" alt></a>
+                            <div class="meta"><h4 class="h4">Próxima</h4><p
+                                    class="info">Pendiente</p></div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Comidas Regionales -->
+                <section id="Regional" class="categoria">
+                    <div class="cat-head">
+                        <h3>Comidas Regionales</h3>
+                        <div class="controls">
+                            <button class="prev"
+                                data-target="regional">◀</button>
+                            <button class="next"
+                                data-target="regional">▶</button>
+                        </div>
+                    </div>
+                    <div class="carousel" data-carousel="regional">
+                        <article class="card"><a
+                                href="recetas/empanadas_salteñas.html"><img
+                                    src="imagenes/empanadas_salteñas.jpg"
+                                    alt="Empanadas">
+                            <div class="meta"><h4 class="h4">Empanadas Salteñas</h4><p
+                                    class="info">Tiempo: 2 h • ★★★★☆ • Autor:
+                                    Geronimo Gomez</p></div>
+                                    </a>
+                        </article>
+
+                        <article class="card"><a
+                                href="recetas/humita_en_chala.html"><img
+                                    src="imagenes/humita_en_chala.webp"
+                                    alt="Humita">
+                            <div class="meta"><h4 class="h4">Humita en Chala</h4><p
+                                    class="info">Tiempo: 1.5 h • ★★★★☆ • Autor:
+                                    Pedro Pascal</p></div>
+                                    </a>
+                        </article>
+
+                        <article class="card"><a href="recetas/locro_criollo.html"><img
+                                    src="imagenes/locro_criollo.webp"
+                                    alt="Locro">
+                            <div class="meta"><h4 class="h4">Locro Criollo</h4><p
+                                    class="info">Tiempo: 3 h • ★★★★☆ • Autor:
+                                    Geronimo Gomez</p></div>
+                                    </a>
+                        </article>
+
+                        <article class="card placeholder"><a href="#"><img
+                                    src="imagenes/placeholder.jpg" alt></a>
+                            <div class="meta"><h4 class="h4">Próxima</h4><p
+                                    class="info">Pendiente</p></div>
+                        </article>
+
+                        <article class="card placeholder"><a href="#"><img
+                                    src="imagenes/placeholder.jpg" alt></a>
+                            <div class="meta"><h4 class="h4">Próxima</h4><p
+                                    class="info">Pendiente</p></div>
+                        </article>
+
+                        <article class="card placeholder"><a href="#"><img
+                                    src="imagenes/placeholder.jpg" alt></a>
+                            <div class="meta"><h4 class="h4">Próxima</h4><p
+                                    class="info">Pendiente</p></div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Panificados y Masas -->
+                <section id="Panificados" class="categoria">
+                    <div class="cat-head">
+                        <h3>Panificados y Masas</h3>
+                        <div class="controls">
+                            <button class="prev"
+                                data-target="panificados">◀</button>
+                            <button class="next"
+                                data-target="panificados">▶</button>
+                        </div>
+                    </div>
+                    <div class="carousel" data-carousel="panificados">
+                        <article class="card"><a href="recetas/pan_casero.html"><img
+                                    src="imagenes/pan_casero.webp"
+                                    alt="Pan casero">
+                            <div class="meta"><h4 class="h4">Pan Casero</h4><p
+                                    class="info">Tiempo: 3 h • ★★★★☆ • Autor:
+                                    Lautaro Martínez</p></div>
+                                    </a>
+                        </article>
+
+                        <article class="card"><a href="recetas/pizza_casera.html"><img
+                                    src="imagenes/pizza_casera.jpeg "
+                                    alt="Pizza">
+                            <div class="meta"><h4 class="h4">Pizza Casera</h4><p
+                                    class="info">Tiempo: 2 h • ★★★★☆ • Autor:
+                                    Lautaro Martínez</p></div>
+                                    </a>
+                        </article>
+
+                        <article class="card"><a href="recetas/noquis_de_papa.html"><img
+                                    src="imagenes/noquis_de_papa.webp   "
+                                    alt="Ñoquis">
+                            <div class="meta"><h4 class="h4">Ñoquis de Papa</h4><p
+                                    class="info">Tiempo: 1.5 h • ★★★★☆ • Autor:
+                                    Pedro Pascal</p></div>
+                                    </a>
+                        </article>
+
+                        <article class="card placeholder"><a href="#"><img
+                                    src="imagenes/placeholder.jpg" alt></a>
+                            <div class="meta"><h4 class="h4">Próxima</h4><p
+                                    class="info">Pendiente</p></div>
+                        </article>
+
+                        <article class="card placeholder"><a href="#"><img
+                                    src="imagenes/placeholder.jpg" alt></a>
+                            <div class="meta"><h4 class="h4">Próxima</h4><p
+                                    class="info">Pendiente</p></div>
+                        </article>
+
+                        <article class="card placeholder"><a href="#"><img
+                                    src="imagenes/placeholder.jpg" alt></a>
+                            <div class="meta"><h4 class="h4">Próxima</h4><p
+                                    class="info">Pendiente</p></div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Vegetarianos y Ensaladas -->
+                <section id="Vegetarianas" class="categoria">
+                    <div class="cat-head">
+                        <h3>Vegetarianos y Ensaladas</h3>
+                        <div class="controls">
+                            <button class="prev"
+                                data-target="vegetarianas">◀</button>
+                            <button class="next"
+                                data-target="vegetarianas">▶</button>
+                        </div>
+                    </div>
+                    <div class="carousel" data-carousel="vegetarianas">
+                        <article class="card"><a href="recetas/ensalada_rusa.html"><img
+                                    src="imagenes/ensalada_rusa.webp"
+                                    alt="Ensalada rusa">
+                            <div class="meta"><h4 class="h4">Ensalada Rusa</h4><p
+                                    class="info">Tiempo: 30 min • ★★★★☆ • Autor:
+                                    Pedro Pascal</p></div>
+                                    </a>
+                        </article>
+
+                        <article class="card">
+                            <a href="recetas/tarta_de_verduras.html"><img
+                                    src="imagenes/tarta_de_verdura.webp"
+                                    alt="Tarta de verduras">
+                            <div class="meta"><h4 class="h4">Tarta de Verduras</h4><p
+                                    class="info">Tiempo: 1 h • ★★★★☆ • Autor:
+                                    Pedro Pascal</p></div>
+                                    </a>
+                        </article>
+
+                        <article class="card placeholder"><a href="#"><img
+                                    src="imagenes/placeholder.jpg" alt></a>
+                            <div class="meta"><h4 class="h4">Próxima</h4><p
+                                    class="info">Pendiente</p></div>
+                        </article>
+
+                        <article class="card placeholder"><a href="#"><img
+                                    src="imagenes/placeholder.jpg" alt></a>
+                            <div class="meta"><h4 class="h4">Próxima</h4><p
+                                    class="info">Pendiente</p></div>
+                        </article>
+
+                        <article class="card placeholder"><a href="#"><img
+                                    src="imagenes/placeholder.jpg" alt></a>
+                            <div class="meta"><h4 class="h4">Próxima</h4><p
+                                    class="info">Pendiente</p></div>
+                        </article>
+
+                        <article class="card placeholder"><a href="#"><img
+                                    src="imagenes/placeholder.jpg" alt></a>
+                            <div class="meta"><h4 class="h4">Próxima</h4><p
+                                    class="info">Pendiente</p></div>
+                        </article>
+                    </div>
+                </section>
+            </article>
+
+            <!-- FOOTER -->
+            
+        </main>
+        <footer class="site-footer">
+                    <div class="footer-brand">
+                        <img src="imagenes/principal/Logo.png" alt="Logo" class="footer-logo">
+                        <h2 class="h2">Kitty claus</h2>
+                    </div>
+                    <div class="footer-links">
+                        <div class="fcol"><h4 class="h4">Acerca</h4><p>Recetas, tips y
+                                más.</p></div>
+                        <div
+                            class="fcol"><h4 class="h4">Contacto</h4><p>gmail@gmail.com</p></div>
+                        <div class="fcol"><h4 class="h4">Legal</h4><p>Términos y
+                                privacidad</p></div>
+                    </div>
+            </footer>
+            </aside>
+        <!-- Scripts -->
+        <script src="js/script.js"></script>
+    </body>
+</html>
+
+
+
