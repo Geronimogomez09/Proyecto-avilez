@@ -267,60 +267,38 @@ body {
   
 
 /* ===== FOOTER ===== */
-.site-footer {
-    background-color: rgb(226, 226, 226);
-    border-top: 1px solid #e8e8e8;
-    color: var(--muted);
-    padding: 10px 20px; 
+footer, .footer-links{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
     box-sizing: border-box;
-    display: flex;
-    align-items:center;
-    justify-content: space-between;
-    gap: 20px;
-
-    /* 🔥 Para dejarlo fijo al fondo */
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 81%;
-    z-index: 10;
-    margin-left: 322px;
-    box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.05);
-}
-
-.footer-inner {
-    max-width: var(--max-width);
-    margin: 0 auto;
-    display: flex;
-    gap: 20px;
     align-items: center;
-    padding: 5px 20px;
-    justify-content: space-between;
+    justify-content: space-around;
+    padding: 20px;
+    color: #555;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.596);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 }
-
-.footer-logo {
-    width: 60px;
-    height: 60px;
+.fcol{
+    width: 20vw;
+}
+.footer-links{
+        border-radius: 40px;
+        margin: 20px;
+}
+.footer-brand{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.footer-logo{
+    width: 100px;
+    height: 100px; 
     object-fit: cover;
-    border-radius: 18px;
-}
-
-.footer-links {
-    display: flex;
-    gap: 20px;
-}
-
-.footer-links .fcol {
-    min-width: 140px;
-}
-
-.footer-brand {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    position: relative;
-    top: -5px;
-    left: -10px;
+    border-radius: 20px;
+    margin: 5px;
 }
 
 /* 🌸 Para que no tape el contenido de la galería */

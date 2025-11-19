@@ -9,7 +9,7 @@ $resultado = mysqli_query($conn, "SELECT * FROM comentario where id_receta=2");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asado Argentino Tradicional</title>
+    <title>Bizcochuelo de Vainilla</title>
     <link rel="stylesheet" href="recetas.css">
     <link rel="icon" href="../imagenes/principal/Logo.png">
 </head>
@@ -106,6 +106,7 @@ $resultado = mysqli_query($conn, "SELECT * FROM comentario where id_receta=2");
         </div>
     </div>
         <div class="opiniones" id="opiniones">
+            <h1>Caja de Opiniones</h1>
     <div class="mx-3 p-2" style="max-width: 900px;">
         <div class="comentarios-content">
         <?php while ($fila = mysqli_fetch_assoc($resultado)) { ?>
@@ -115,7 +116,7 @@ $resultado = mysqli_query($conn, "SELECT * FROM comentario where id_receta=2");
                 <!-- Nombre + Valor -->
                 <div class="com-header">
                     <strong><?= $fila['nombre'] ?></strong>
-                    <p>valoración: <span class="valor"><?= $fila['valor'] ?></span>/5</p>
+                    <p> valoración: <span class="valor"><?= $fila['valor'] ?></span>/5</p>
                 </div>
 
                 <!-- Comentario -->
@@ -134,7 +135,7 @@ $resultado = mysqli_query($conn, "SELECT * FROM comentario where id_receta=2");
         <?php } ?>
         </div>
         <!-- Botón Agregar -->
-        <a class="btn btn-outline-dark m-3" href="agregar2.php">Agregar comentario</a>
+        <a class="btn btn-outline-dark" href="agregar2.php">Agregar comentario</a>
     </div>
 </div>
 
